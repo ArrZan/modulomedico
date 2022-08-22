@@ -1,0 +1,102 @@
+{% extends 'formulario.html' %}
+{% load static %}
+{% block controls %}
+    <div class="container-fluid col-md-6 border" style="background: white">
+        <div class="">
+            <h5 class="text-center m-3">Datos del Paciente</h5>
+            <div class="container">
+                <div class="input-group mb-3 ">
+                    <span class="input-group-text" id="basic-addon1">Paciente</span>
+                    <input type="text" class="form-control" placeholder="" aria-label="Username"
+                           aria-describedby="basic-addon1" disabled>
+                    <button class="btn btn-outline-secondary" type="button" id="button-addon1">Cédula</button>
+                    <input type="tel" maxlength="10" class="form-control" placeholder="0999999999"
+                           aria-label="Example text with button addon"
+                           aria-describedby="button-addon1">
+                </div>
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon2">Edad</span>
+                    <input type="text" class="form-control" placeholder="" aria-label="Username"
+                           aria-describedby="basic-addon1" disabled>
+                    <span class="input-group-text" id="basic-addon2">Teléfono</span>
+                    <input type="text" class="form-control" placeholder="" aria-label="Username"
+                           aria-describedby="basic-addon1" disabled>
+                </div>
+            </div>
+
+
+            <h5 class="text-center">Datos del Médico</h5>
+            <div class="container">
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">Médico</span>
+                    <input type="text" class="form-control" placeholder="" aria-label="Username"
+                           aria-describedby="basic-addon1" disabled>
+                    <button class="btn btn-outline-secondary" type="button" id="button-addon1">Cédula</button>
+                    <input type="tel" maxlength="10" class="form-control" placeholder="0999999999"
+                           aria-label="Example text with button addon"
+                           aria-describedby="button-addon1">
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon2">Profesión</span>
+                    <input type="text" class="form-control" placeholder="" aria-label="Username"
+                           aria-describedby="basic-addon1" disabled>
+                    <span class="input-group-text" id="basic-addon2">Teléfono</span>
+                    <input type="text" class="form-control" placeholder="" aria-label="Username"
+                           aria-describedby="basic-addon1" disabled>
+                </div>
+                <div class="col border border-1 border-dark"></div>
+            </div>
+
+            <h5 class="m-3 text-center">Detalle del diagnóstico</h5>
+            <div class="container">
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon3">Diagnóstico</span>
+                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3"
+                           placeholder="Ingrese el diagnóstico">
+                </div>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col" class="text-center" style="width: 10%">#</th>
+                        <th scope="col" style="width: 30%">Medicamento</th>
+                        <th scope="col" style="width: 60%">Indicaciones</th>
+                    </tr>
+                    </thead>
+                    <tbody class="text-center">
+                    <tr>
+                        <th scope="row">1</th>
+                        <td><input type="text" style="border: 0" placeholder="Ingrese medicamento"></td>
+                        <td><textarea class="form-control" id="FormControlTextarea1" rows="2"
+                                      placeholder="Indique la preescripción del medicamento"></textarea></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td><input type="text" style="border: 0" placeholder="Ingrese medicamento"></td>
+                        <td><textarea class="form-control" id="FormControlTextarea2" rows="2"
+                                      placeholder="Indique la Preescripción del medicamento"></textarea></td>
+                    </tr>
+                    <tr>
+                    </tr>
+                    </tbody>
+                </table>
+                <div class="d-grid gap-2 m-4">
+                        <button type="button" class="btn btn-outline-dark btn-sm">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="currentColor"
+                                 class="bi bi-plus" viewBox="0 0 16 16">
+                                <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                            </svg>
+                            Añadir Nueva preescripción
+                        </button>
+                        <button type="button" class="btn btn-outline-dark btn-sm">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="currentColor"
+                                 class="bi bi-plus" viewBox="0 0 16 16">
+                                <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                            </svg>
+                            Eliminar última preescripción
+                        </button>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,117 @@
+{% extends 'consultaEmpleado.html' %}
+{% load static %}
+{% block columns %}
+    <tr>
+        <th scope="col" style="width: 3%;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+                 class="bi bi-sort-numeric-down" viewBox="0 0 16 16">
+                <path d="M12.438 1.668V7H11.39V2.684h-.051l-1.211.859v-.969l1.262-.906h1.046z"/>
+                <path fill-rule="evenodd"
+                      d="M11.36 14.098c-1.137 0-1.708-.657-1.762-1.278h1.004c.058.223.343.45.773.45.824 0 1.164-.829 1.133-1.856h-.059c-.148.39-.57.742-1.261.742-.91 0-1.72-.613-1.72-1.758 0-1.148.848-1.835 1.973-1.835 1.09 0 2.063.636 2.063 2.687 0 1.867-.723 2.848-2.145 2.848zm.062-2.735c.504 0 .933-.336.933-.972 0-.633-.398-1.008-.94-1.008-.52 0-.927.375-.927 1 0 .64.418.98.934.98z"/>
+                <path d="M4.5 2.5a.5.5 0 0 0-1 0v9.793l-1.146-1.147a.5.5 0 0 0-.708.708l2 1.999.007.007a.497.497 0 0 0 .7-.006l2-2a.5.5 0 0 0-.707-.708L4.5 12.293V2.5z"/>
+            </svg>
+            Nro
+        </th>
+        <th scope="col" style="width: 10%;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-postcard"
+                 viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                      d="M2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H2ZM1 4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V4Zm7.5.5a.5.5 0 0 0-1 0v7a.5.5 0 0 0 1 0v-7ZM2 5.5a.5.5 0 0 1 .5-.5H6a.5.5 0 0 1 0 1H2.5a.5.5 0 0 1-.5-.5Zm0 2a.5.5 0 0 1 .5-.5H6a.5.5 0 0 1 0 1H2.5a.5.5 0 0 1-.5-.5Zm0 2a.5.5 0 0 1 .5-.5H6a.5.5 0 0 1 0 1H2.5a.5.5 0 0 1-.5-.5ZM10.5 5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3ZM13 8h-2V6h2v2Z"/>
+            </svg>
+            Cédula
+        </th>
+        <th scope="col" style="width: 10%;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-people"
+                 viewBox="0 0 16 16">
+                <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816zM4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275zM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/>
+            </svg>
+            Nombre
+        </th>
+        <th scope="col" style="width: 10%;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+                 class="bi bi-layout-text-window-reverse" viewBox="0 0 16 16">
+                <path d="M13 6.5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 .5-.5zm0 3a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 .5-.5zm-.5 2.5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1 0-1h5z"/>
+                <path d="M14 0a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12zM2 1a1 1 0 0 0-1 1v1h14V2a1 1 0 0 0-1-1H2zM1 4v10a1 1 0 0 0 1 1h2V4H1zm4 0v11h9a1 1 0 0 0 1-1V4H5z"/>
+            </svg>
+            Profesión
+        </th>
+        <th scope="col" style="width: 10%;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-at"
+                 viewBox="0 0 16 16">
+                <path d="M13.106 7.222c0-2.967-2.249-5.032-5.482-5.032-3.35 0-5.646 2.318-5.646 5.702 0 3.493 2.235 5.708 5.762 5.708.862 0 1.689-.123 2.304-.335v-.862c-.43.199-1.354.328-2.29.328-2.926 0-4.813-1.88-4.813-4.798 0-2.844 1.921-4.881 4.594-4.881 2.735 0 4.608 1.688 4.608 4.156 0 1.682-.554 2.769-1.416 2.769-.492 0-.772-.28-.772-.76V5.206H8.923v.834h-.11c-.266-.595-.881-.964-1.6-.964-1.4 0-2.378 1.162-2.378 2.823 0 1.737.957 2.906 2.379 2.906.8 0 1.415-.39 1.709-1.087h.11c.081.67.703 1.148 1.503 1.148 1.572 0 2.57-1.415 2.57-3.643zm-7.177.704c0-1.197.54-1.907 1.456-1.907.93 0 1.524.738 1.524 1.907S8.308 9.84 7.371 9.84c-.895 0-1.442-.725-1.442-1.914z"/>
+            </svg>
+            Correo
+        </th>
+        {#        <th scope="col" style="width: 10%;">Opciones</th>#}
+    </tr>
+{% endblock %}
+
+{% block rows %}
+    <tr>
+        <td>1</td>
+        <td>09865366897</td>
+        <td>Joel Campoverde</td>
+        <td>Administrador</td>
+        <td class="fst-italic text-decoration-underline">JoeCamp@hotmail.com</td>
+{#        <td class="acciones">#}
+{#            <a href="{% url 'formmedicamento' %}" class="btn">✏️</a>#}
+{#            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">❌</button>#}
+{#        </td>#}
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>0969856659</td>
+        <td>Liza Valverde</td>
+        <td>Oficinista</td>
+        <td class="fst-italic text-decoration-underline">LizValv@hotmail.com</td>
+        {#            <td class="acciones">#}
+        {#                <a href="{% url 'formmedicamento' %}" class="btn">✏️</a>#}
+        {#                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">❌</button>#}
+        {#            </td>#}
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>0945345664</td>
+        <td>Jasmani Ruiz</td>
+        <td>Oficinista</td>
+        <td class="fst-italic text-decoration-underline">JasmRui@hotmail.com</td>
+        {#            <td class="acciones">#}
+        {#                <a href="{% url 'formmedicamento' %}" class="btn">✏️</a>#}
+        {#                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">❌</button>#}
+        {#            </td>#}
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>0934391823</td>
+        <td>Ariel Bazurto</td>
+        <td>Obrero</td>
+        <td class="fst-italic text-decoration-underline">AriBaz@hotmail.com</td>
+        {#            <td class="acciones">#}
+        {#                <a href="{% url 'formmedicamento' %}" class="btn">✏️</a>#}
+        {#                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">❌</button>#}
+        {#            </td>#}
+    </tr>
+    <tr>
+        <td>5</td>
+        <td>0934534634</td>
+        <td>Lucía Miranda</td>
+        <td>Médico general</td>
+        <td class="fst-italic text-decoration-underline">LucMir@hotmail.com</td>
+        {#            <td class="acciones">#}
+        {#                <a href="{% url 'formmedicamento' %}" class="btn">✏️</a>#}
+        {#                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">❌</button>#}
+        {#            </td>#}
+    </tr>
+    <tr>
+        <td>6</td>
+        <td>0944532345</td>
+        <td>Carmen Romero</td>
+        <td>Obrero</td>
+        <td class="fst-italic text-decoration-underline">CarmRom@hotmail.com</td>
+        {#            <td class="acciones">#}
+        {#                <a href="{% url 'formmedicamento' %}" class="btn">✏️</a>#}
+        {#                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">❌</button>#}
+        {#            </td>#}
+    </tr>
+{% endblock %}
+

@@ -1,0 +1,91 @@
+{% extends 'formulario.html' %}
+{% load static %}
+
+{% block controls %}
+    <div class="container-fluid col-md-6 border border-secondary bg-light">
+        <div class="d-grid m-5">
+
+
+            {#             El row-cols-'s,sm,md,etc' es para controlar el responsive de las columnas por dimensión#}
+            <div class="row row-cols-2 row-cols-sm-2 row-cols-lg">
+                <div class="col-md-4">
+                    <img src="/static/img/logos/logo-receta.png" alt="logo" class="img-fluid">
+                </div>
+                <div class="col-md-8 text-end">
+                    <br>
+                    <label for="inputDoctor" class="form-label">
+                        <h3>DR: LUCÍA MIRANDA
+                            <h6>
+                                <label for="inputprofesion" class="form-label">MÉDICO GENERAL</label><br>
+                                <label for="inputID" class="form-label">ID: 0934534634</label><br>
+                                <label for="inputTelf" class="form-label">TELÉFONO: 093433783</label><br>
+                            </h6>
+                        </h3>
+                    </label><br>
+                    </label><br>
+                </div>
+            </div>
+
+
+            {#            Línea divisiva#}
+            <div class="col border border-1 border-dark"></div>
+            <div class="row m-2">
+                <div class="col-md-6">
+                    <p>
+                        Paciente: Jasmani Ruiz <br>
+                        Edad: 35<br>
+                    </p>
+                    </span>
+                </div>
+                <div class="col-md-6">
+                    <p>
+                        Cédula: 0945345664<br>
+                        Teléfono: 0996535698<br>
+                    </p>
+                </div>
+                <div class="col-md-12">
+                    <label for="inputDiagnostic" class="form-label fw-bold fs-5">Diagnostico:</label>
+                </div>
+                <div class="col-md-12">
+                    <label for="inputDiagnostic" class="form-label">Rinitis alérgica</label>
+                </div>
+                <div class="col-md-12">
+                    <table class="table border">
+                        <thead>
+                        <tr>
+                            <th scope="col">Medicamento</th>
+                            <th scope="col">Indicaciones</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Zyrtec-D</td>
+                            <td>Una pastilla cada 12 horas</td>
+                        </tr>
+                        <tr>
+                            <td>Nasalcrom</td>
+                            <td>Dos aplicaciones en cada fosa nasal una vez al día (dosis total 200 microgramos)</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+                <div class="row mx-auto">
+                    <div class="col-md-6 text-center">
+                        <br><br><br><br>
+                        <div class="col-md-12 border border-dark"></div>
+                        <label for="inputFirm" class="form-label fw-bold">Firma y Sello</label>
+                    </div>
+                    <div class="col-md-6 text-end">
+                        <br><br><br><br>
+                        <label for="inputFecha" class="form-label fw-bold">Fecha: 15/08/2022</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block main %}
+    <div class="container-fluid">
+        <div class="row row-cols-1 row-cols-sm-3 row-cols-md-4 row-cols-lg-6 g-2">
+            <div class="col">
+                <div class="card" style="height:15rem">
+                    <img src="{% static 'img/cards/empleado.png' %}" class="img-fluid  mx-auto d-block"
+                         style="width:35%">
+                    <div class="card-body text-center">
+                        <a class="text-decoration-none" href="{% url 'listempleado' %}">
+                            <h5 class="card-title text-success">Empleados</h5>
+                        </a>
+                        <p class="card-text">Empleados de la empresa</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="height:15rem">
+                    <img src="{% static 'img/cards/receta.png' %}" class="img-fluid  mx-auto d-block"
+                         style="width:35%">
+                    <div class="card-body text-center">
+                        <a class="text-decoration-none" href="{% url 'listreceta' %}">
+                            <h5 class="card-title text-success">Receta</h5>
+                        </a>
+                        <p class="card-text">Prescripción médica del paciente</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="height:15rem">
+                    <img src="{% static 'img/cards/diagnóstico.png' %}" class="img-fluid  mx-auto d-block"
+                         style="width:35%">
+                    <div class="card-body text-center">
+                        <a class="text-decoration-none" href="{% url 'listdiagnostico' %}">
+                            <h5 class="card-title text-success">Diagnóstico</h5>
+                        </a>
+                        <p class="card-text">Enfermedades diagnósticadas</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="height:15rem">
+                    <img src="{% static 'img/cards/medicamento.png' %}" class="img-fluid  mx-auto d-block"
+                         style="width:35%">
+                    <div class="card-body text-center">
+                        <a class="text-decoration-none" href="{% url 'listmedicamento' %}">
+                            <h5 class="card-title text-success">Medicamento</h5>
+                        </a>
+                        <p class="card-text">Fármacos recetados a los pacientes</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="height:15rem">
+                    <img src="{% static 'img/cards/historial-clinico.png' %}" class="img-fluid  mx-auto d-block"
+                         style="width:35%">
+                    <div class="card-body text-center">
+                        <a class="text-decoration-none" href="{% url 'listhistorclin' %}"><h5
+                                class="card-title text-success">Historial Clínico</h5>
+                        </a>
+                        <p class="card-text">Informe médico de los empleados</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

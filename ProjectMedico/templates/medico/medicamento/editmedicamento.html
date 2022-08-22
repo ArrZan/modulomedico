@@ -1,0 +1,25 @@
+{% extends 'formulario.html' %}
+{% load static %}
+
+{% block controls %}
+    <div class="container col-md-5 p-3 bg-light rounded border">
+        <div class="row">
+            <div class="col-md m-2 text-center"><h5>EDITAR MEDICAMENTO</h5></div>
+        </div>
+        <div class="col border border-1 border-dark"></div>
+        <div class="row row-cols-2 row-cols-sm-2 row-cols-lg m-2">
+            <div class="col-md-4">
+                <label for="inputEmail4" class="form-label">Nro</label>
+                <input type="text" class="form-control" id="inputMedicine" placeholder="8" disabled>
+            </div>
+            <div class="col-md-8">
+                <label for="inputEmail4" class="form-label">Codigo</label>
+                <input type="text" class="form-control" id="inputID" placeholder="999999">
+            </div>
+            <div class="col-md-12">
+                <label for="inputEmail4" class="form-label">Medicamento</label>
+                <input type="text" class="form-control" id="inputName" placeholder="Nombre de Medicina">
+            </div>
+        </div>
+    </div>
+{% endblock %}
